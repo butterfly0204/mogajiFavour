@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smooch&display=swap');
+
+:root{
+--header-height:3.5rem;
+
+--first-color: lab(42.56% 71.11 -44.26);
+--first-color-light: rgba(96, 19, 196, 0.808);
+--first-color-lighten: rgba(127, 19, 177, 0.534);
+--white-color: white;
+
+
+--body-font:"Montserrat", sans-serif;
+--second-font: "Smooch", cursive;
+--biggest-font-size: 6rem;
+--h3-font-size:1rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+
+
+--font-regular: 400;
+--font-semi-bold: 600;
+--z-tooltip: 10;
+--z-fixed:100;
+
+@media screen and (min-width:1150px) {
+    :root{
+        --biggest-font-size: 17rem;
+        --h2-font-size:1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+    
+}
+
+*{box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+.main{
+    overflow: hidden;
+}
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+.nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ .navLogo{
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold );
+ }
+ .navClose,
+ .navToogle,
+ .navActions{
+    display: flex;
+    font-size: 1.25rem;
+    cursor:pointer;
+ }
+ 
+.navActions{
+    column-gap: 5rem;
+}
+
+@media screen and (max-width: 1150px) {
+    .navMenu{
+        position:fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--first-color);
+        width: 80%;
+        height: 100%;
+        box-shadow: -2px 0 12px black;
+        padding: 6rem 3rem 0;
+        transition: right .4s;
+    }
+    
+}
+.navList{ 
+    display:flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+}
+
+
+.navLink{
+    color:var(--white-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.navLink:hover{
+    text-decoration: underline;
+}
+
+.navClose{
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
+
+
+.show-menu{
+    right: 0;
+}
+
+}
+.homeContainer{
+    padding-block: 9rem 2rem;
+    display: grid;
+    align-items: center;
+    row-gap: 6rem;
+
+}
+.homeContent{
+    position: relative;
+    display: grid;
+}
+.homeCircle{
+    position: absolute;
+    inset: 0;
+    width: 280px;
+    height: 280px;
+    border: 3px solid var(--first-color-lighten);
+    border-radius: 50%;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+
+}
+.homeSubCircle{
+   width: 246px;
+   height: 246px;
+   border: 12px solid var(--first-color-light);
+   border-radius: 50%; 
+}
+.homeTitle{
+
+    position: absolute;
+    font-size: var(--biggest-font-size);
+    font-family: var(--second-font);
+    font-weight: var(--font-regular);
+}
+.homeImage{
+    width: 250px;
+    filter: drop-shadow(-8px 8px 16px black);
+    margin: 0 auto 2rem;
+
+}
+.homeArticle{
+    text-align: center;
+}
+.homeProduct, 
+.homePrice{
+font-size: var(--h3-font-size);
+margin-bottom: .25rem;
+
+}
+.homeFooter, 
+.homeLanguage,
+.homeSocial{
+    display: flex;
+
+}
+.homeFooter{
+    justify-content: space-between;
+    align-items: center;
+
+}
+.homeLanguage{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+
+}
+.homeSocial{
+    column-gap: 1rem;
+
+}
+.homeSocialLink{
+    font-size: 1.25rem;
+    color: var(--white-color);
+
+}
+.swiper{
+    margin-inline: initial;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    top: initial;
+    bottom: 0;
+    font-size: 1.5rem;
+   color: var(--white-color);
+
+}
+.swiper-button-prev{
+    left: calc(50% - 8rem);
+}
+
+.swiper-button-next{
+    right: calc(50% - 8rem);
+}
+
+
+
